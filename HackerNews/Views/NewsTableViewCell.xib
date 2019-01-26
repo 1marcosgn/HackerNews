@@ -19,46 +19,48 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="270.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mS-Sz-ecK">
-                        <rect key="frame" x="16" y="240.5" width="288" height="19.5"/>
-                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VTp-YF-6a6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="270.5"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Government shutdown deal reached: Trump announcement opens government, shutdown over after vote by Congress" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0I-GS-Y6h">
-                        <rect key="frame" x="16" y="186.5" width="288" height="54"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oZN-gQ-PuJ">
+                        <rect key="frame" x="16" y="146" width="268" height="116.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Government shutdown deal reached: Trump  announcement opens government, shutdown  over after vote by Congress" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRB-Yr-5xR">
+                                <rect key="frame" x="0.0" y="0.0" width="268" height="53.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author as dsdadas da  aadfafdsdfdsfsdf " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pB-gL-ZIf">
+                                <rect key="frame" x="0.0" y="53.5" width="268" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" constant="54" id="Aer-D2-1kp"/>
+                            <constraint firstAttribute="height" constant="116.5" id="K81-W6-uav"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="9mS-Sz-ecK" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="CZc-Ol-TQA"/>
-                    <constraint firstItem="T0I-GS-Y6h" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="GQ4-Rf-cAR"/>
-                    <constraint firstItem="9mS-Sz-ecK" firstAttribute="top" secondItem="T0I-GS-Y6h" secondAttribute="bottom" id="MUQ-bh-eOQ"/>
-                    <constraint firstItem="VTp-YF-6a6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NLW-6F-Sbe"/>
-                    <constraint firstItem="T0I-GS-Y6h" firstAttribute="top" secondItem="VTp-YF-6a6" secondAttribute="bottom" constant="7.5" id="O0S-j5-WQm"/>
-                    <constraint firstAttribute="trailing" secondItem="VTp-YF-6a6" secondAttribute="trailing" id="OQk-qT-FKm"/>
-                    <constraint firstItem="9mS-Sz-ecK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="TLN-Ow-SJ4"/>
-                    <constraint firstItem="VTp-YF-6a6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Tsf-wq-0y5"/>
-                    <constraint firstItem="T0I-GS-Y6h" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="WG3-vT-Ela"/>
-                    <constraint firstItem="T0I-GS-Y6h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="XKZ-Xc-Kng"/>
-                    <constraint firstItem="T0I-GS-Y6h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="dVD-WI-iru"/>
-                    <constraint firstItem="9mS-Sz-ecK" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="qhk-Jw-nUu"/>
-                    <constraint firstItem="9mS-Sz-ecK" firstAttribute="top" secondItem="T0I-GS-Y6h" secondAttribute="bottom" id="vnD-jh-xe5"/>
+                    <constraint firstItem="oZN-gQ-PuJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="66h-TB-XBo"/>
+                    <constraint firstItem="VTp-YF-6a6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ICu-qY-w2a"/>
+                    <constraint firstAttribute="trailing" secondItem="oZN-gQ-PuJ" secondAttribute="trailing" constant="36" id="KfY-Br-Fhg"/>
+                    <constraint firstAttribute="trailing" secondItem="VTp-YF-6a6" secondAttribute="trailing" id="OI4-99-JGK"/>
+                    <constraint firstAttribute="bottom" secondItem="VTp-YF-6a6" secondAttribute="bottom" id="WJ2-UG-lrl"/>
+                    <constraint firstAttribute="bottom" secondItem="oZN-gQ-PuJ" secondAttribute="bottom" constant="8" id="lby-in-NS0"/>
+                    <constraint firstItem="VTp-YF-6a6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="wch-IL-C0q"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imageBanner" destination="VTp-YF-6a6" id="ckD-R3-sK0"/>
-                <outlet property="subtitle" destination="9mS-Sz-ecK" id="yvt-Fw-fDa"/>
-                <outlet property="title" destination="T0I-GS-Y6h" id="pUd-zD-0f8"/>
+                <outlet property="subtitle" destination="9pB-gL-ZIf" id="FpA-AZ-28b"/>
+                <outlet property="title" destination="eRB-Yr-5xR" id="fMr-k4-Mmc"/>
             </connections>
             <point key="canvasLocation" x="52.799999999999997" y="150.67466266866569"/>
         </tableViewCell>

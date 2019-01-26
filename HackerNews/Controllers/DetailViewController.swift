@@ -14,16 +14,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var bannerImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var ContentText: UILabel!
+    @IBOutlet weak var contentText: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bannerImage.imageFromServerURL(urlString: news?.urlToImage)
         titleLabel.text = news?.title
         descriptionLabel.text = news?.description
-        ContentText.text = news?.content
+        contentText.text = news?.content
     }
-
     convenience init(newsObject: News) {
         self.init()
         self.news = newsObject
