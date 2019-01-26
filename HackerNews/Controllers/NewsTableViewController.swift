@@ -27,11 +27,13 @@ class NewsTableViewController: UITableViewController {
 /// Extension to Set up Table
 extension NewsTableViewController {
     func configureTableView() {
+        tableView.accessibilityIdentifier = "newsTableView"
         let nib = UINib(nibName: "NewsTableViewCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "news")
         tableView.separatorColor = UIColor.black
         tableView.backgroundColor = UIColor.black
         navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.backItem?.titleView?.accessibilityIdentifier = "hey" 
     }
     
     func configureNews() {
@@ -98,6 +100,7 @@ extension NewsTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "news", for: indexPath) as! NewsTableViewCell
         // Configure the cell...
+        cell.accessibilityIdentifier = "newsCell_\(indexPath.row)"
         cell.preservesSuperviewLayoutMargins = false
         cell.separatorInset = UIEdgeInsets.zero
         cell.layoutMargins = UIEdgeInsets.zero

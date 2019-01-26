@@ -11,24 +11,47 @@ import XCTest
 
 class HackerNewsTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_News_Model_Should_Have_Valid_Data() {
+        /// Given
+        let mockDictionary = ["author":"Aatif Sumar",
+                              "urlToImage":"https://i.ytimg.com/vi/YIXH2M23I8I/maxresdefault.jpg",
+                              "title":"[Update: It's back] Snag a 43\" 4K smart Toshiba Fire TV for just $200, an all-time low - Android Police",
+                              "description":"We found a particularly tempting TV sale this Sunday — $200 for a Toshiba 43\" Fire TV. With HDR support, this 4K LED TV is a Fire TV Edition device, so you can bark commands across the living room. The TV is well-reviewed, with praises for the image quality",
+                              "content":"We found a particularly tempting TV sale this Sunday — $200 for a Toshiba 43\" Fire TV. With HDR support, this 4K LED TV is a Fire TV Edition device, so you can bark commands across the living room. The TV is well-reviewed, with praises for the image quality a… [+668 chars]"]
+        
+        
+        let mockUrl = URL(string: "https://i.ytimg.com/vi/YIXH2M23I8I/maxresdefault.jpg")
+        
+        /// When
+        let sut = News.init(information: mockDictionary)
+        
+        /// Then
+        XCTAssertNotNil(sut, "News object should not be nel")
+        XCTAssertEqual(sut?.author, "Aatif Sumar", "'author' should match")
+        XCTAssertEqual(sut?.urlToImage, mockUrl, "image url should match")
+        XCTAssertEqual(sut?.title, "[Update: It's back] Snag a 43\" 4K smart Toshiba Fire TV for just $200, an all-time low - Android Police", "title should match")
+        XCTAssertEqual(sut?.description, "We found a particularly tempting TV sale this Sunday — $200 for a Toshiba 43\" Fire TV. With HDR support, this 4K LED TV is a Fire TV Edition device, so you can bark commands across the living room. The TV is well-reviewed, with praises for the image quality", "description should match")
+        XCTAssertEqual(sut?.content, "We found a particularly tempting TV sale this Sunday — $200 for a Toshiba 43\" Fire TV. With HDR support, this 4K LED TV is a Fire TV Edition device, so you can bark commands across the living room. The TV is well-reviewed, with praises for the image quality a… [+668 chars]", "content should match")
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_NewsFactory_Should_Return_Array_Of_News() {
+        
+        /// Given
+        let sut = NewsFactory.shared()
+        
+        let mockDictionary = ["author":"Aatif Sumar",
+                              "urlToImage":"https://i.ytimg.com/vi/YIXH2M23I8I/maxresdefault.jpg",
+                              "title":"[Update: It's back] Snag a 43\" 4K smart Toshiba Fire TV for just $200, an all-time low - Android Police",
+                              "description":"We found a particularly tempting TV sale this Sunday — $200 for a Toshiba 43\" Fire TV. With HDR support, this 4K LED TV is a Fire TV Edition device, so you can bark commands across the living room. The TV is well-reviewed, with praises for the image quality",
+                              "content":"We found a particularly tempting TV sale this Sunday — $200 for a Toshiba 43\" Fire TV. With HDR support, this 4K LED TV is a Fire TV Edition device, so you can bark commands across the living room. The TV is well-reviewed, with praises for the image quality a… [+668 chars]"]
+        
+        /// When
+        let mockArray = [mockDictionary, mockDictionary, mockDictionary]
+        
+        /// Then
+        XCTAssertNotNil(sut, "Factory should not be nil")
+        XCTAssertNotNil(sut.makeNews(news: mockArray), "Factory should return array of news")
+        XCTAssertEqual(sut.makeNews(news: mockArray)?.count, 3, "Number of elements created should match")
     }
 
 }
